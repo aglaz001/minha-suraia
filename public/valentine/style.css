@@ -923,56 +923,197 @@ body {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - MOBILE & TABLET
    ============================================ */
+
+/* Tablets and smaller */
 @media (max-width: 768px) {
+    body {
+        padding-bottom: 160px; /* More space for music player */
+    }
+
     .phase {
         padding: 1rem;
     }
-    
+
     .main-title {
         font-size: 2rem;
+        margin-bottom: 2rem;
     }
-    
+
+    /* Valentine buttons - mobile friendly */
+    .valentine-buttons {
+        min-height: 250px;
+        padding: 1rem;
+    }
+
+    .btn-yes {
+        font-size: 1.3rem;
+        padding: 1.2rem 3rem;
+    }
+
+    .btn-no {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
     .button-container {
         gap: 1rem;
     }
-    
+
     .btn {
         padding: 1rem 2rem;
         font-size: 1.1rem;
     }
-    
-    .music-toggle,
-    .days-counter {
-        top: 1rem;
-        font-size: 0.9rem;
+
+    /* Slideshow - optimized for mobile */
+    .slideshow-wrapper {
+        max-width: 90%;
+        height: 500px;
     }
-    
+
+    .slide-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .slide-indicators {
+        margin-top: 0.8rem;
+    }
+
+    .slide-indicator {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Message cards */
+    .message-card {
+        padding: 1.5rem;
+    }
+
+    .message-text {
+        font-size: 1rem;
+    }
+
+    /* Restaurant card */
+    .restaurant-card {
+        padding: 2rem;
+    }
+
+    .restaurant-name {
+        font-size: 2rem;
+    }
+
+    .detail-item {
+        font-size: 1rem;
+    }
+
     .game-area {
         height: 300px;
     }
-    
-    .final-choice-container {
-        gap: 1rem;
-    }
-    
-    .btn-choice {
-        padding: 1.5rem 2rem;
-        min-width: 150px;
-    }
-    
-    .choice-icon {
-        font-size: 3rem;
-    }
-    
-    .details-card {
-        padding: 2rem;
-    }
-    
+
     .summary-container,
     .final-message {
         padding: 1.5rem;
+    }
+
+    /* Music player */
+    .music-player-container {
+        padding: 0.3rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    /* Valentine buttons - touch optimized */
+    .valentine-buttons {
+        min-height: 280px;
+    }
+
+    .btn-yes {
+        font-size: 1.1rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .btn-no {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+        /* Ensure it's touchable */
+        min-width: 80px;
+        min-height: 44px; /* iOS recommended touch target */
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        /* iOS touch target minimum */
+        min-height: 44px;
+    }
+
+    /* Slideshow */
+    .slideshow-wrapper {
+        max-width: 95%;
+        height: 450px;
+    }
+
+    .slide-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        /* Touch target */
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .slideshow-controls {
+        padding: 0 0.5rem;
+    }
+
+    /* Messages */
+    .message-card {
+        padding: 1.2rem;
+    }
+
+    .message-icon {
+        font-size: 2.5rem;
+    }
+
+    .message-text {
+        font-size: 0.95rem;
+    }
+
+    /* Restaurant */
+    .restaurant-icon {
+        font-size: 4rem;
+    }
+
+    .restaurant-name {
+        font-size: 1.8rem;
+    }
+
+    .restaurant-details {
+        padding: 1.5rem;
+    }
+
+    .detail-item {
+        font-size: 0.95rem;
+    }
+
+    /* Game area */
+    .game-area {
+        height: 250px;
+    }
+
+    .game-heart {
+        font-size: 2.5rem;
+        /* Touch target */
+        min-width: 50px;
+        min-height: 50px;
     }
 }
 

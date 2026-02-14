@@ -48,39 +48,43 @@ function setupPhase1Valentine() {
         }, 1000);
     });
 
-    // Make NO button run away on hover
-    noBtn.addEventListener('mouseenter', () => {
+    // Function to make NO button run away
+    function makeNoButtonRunAway() {
         const container = document.querySelector('.valentine-buttons');
         const containerRect = container.getBoundingClientRect();
 
-        // Random position within container
-        const maxX = containerRect.width - noBtn.offsetWidth - 40;
-        const maxY = containerRect.height - noBtn.offsetHeight - 40;
+        // Get button dimensions
+        const btnWidth = noBtn.offsetWidth;
+        const btnHeight = noBtn.offsetHeight;
 
+        // Calculate safe bounds
+        const maxX = Math.max(0, containerRect.width - btnWidth - 20);
+        const maxY = Math.max(0, containerRect.height - btnHeight - 20);
+
+        // Generate random position
         const randomX = Math.random() * maxX;
         const randomY = Math.random() * maxY;
 
+        // Apply position
         noBtn.style.position = 'absolute';
         noBtn.style.left = randomX + 'px';
         noBtn.style.top = randomY + 'px';
         noBtn.style.transition = 'all 0.3s ease';
-    });
+    }
 
-    // Also run away on touch for mobile
+    // Desktop: run away on hover
+    noBtn.addEventListener('mouseenter', makeNoButtonRunAway);
+
+    // Mobile: run away on touch
     noBtn.addEventListener('touchstart', (e) => {
         e.preventDefault();
-        const container = document.querySelector('.valentine-buttons');
-        const containerRect = container.getBoundingClientRect();
+        makeNoButtonRunAway();
+    });
 
-        const maxX = containerRect.width - noBtn.offsetWidth - 40;
-        const maxY = containerRect.height - noBtn.offsetHeight - 40;
-
-        const randomX = Math.random() * maxX;
-        const randomY = Math.random() * maxY;
-
-        noBtn.style.position = 'absolute';
-        noBtn.style.left = randomX + 'px';
-        noBtn.style.top = randomY + 'px';
+    // Also prevent click on NO button (just in case)
+    noBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        makeNoButtonRunAway();
     });
 }
 
