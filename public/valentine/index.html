@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 Para Brena Suraia 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Music Player (visible at bottom) -->
+    <div class="music-player-container">
+        <iframe
+            id="soundCloudPlayer"
+            width="100%"
+            height="120"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/agostinho-lazaro/sets/para-ti-minha&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true">
+        </iframe>
+    </div>
+
+    <!-- Phase 1: Classic Valentine Question -->
+    <div id="phase1" class="phase active">
+        <div class="floating-hearts" id="floatingHearts"></div>
+        <div class="content-container">
+            <h1 class="main-title">Would you be my Valentine? 💖</h1>
+            <div class="valentine-buttons">
+                <button id="yesBtn" class="btn btn-yes">
+                    <span class="btn-text">YES 💕</span>
+                </button>
+                <button id="noBtn" class="btn btn-no">
+                    <span class="btn-text">NO</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phase 2: Opening with Photo Slideshow -->
+    <div id="phase2" class="phase">
+        <div class="floating-hearts" id="floatingHearts2"></div>
+        <div class="content-container">
+            <h1 class="main-title typewriter">Para ti, Brena Suraia 💖</h1>
+            <p class="subtitle typewriter-delayed">Uma mensagem especial feita com amor</p>
+
+            <!-- Photo Slideshow -->
+            <div class="slideshow-container">
+                <div class="slideshow-wrapper">
+                    <img src="/photos/IMG_7985.jpg" class="slideshow-image active" alt="Nossa memória">
+                    <img src="/photos/IMG_9046.jpg" class="slideshow-image" alt="Nossa memória">
+                    <img src="/photos/IMG_9127.jpg" class="slideshow-image" alt="Nossa memória">
+                    <img src="/photos/IMG_9129.jpg" class="slideshow-image" alt="Nossa memória">
+                    <img src="/photos/IMG_9156.jpg" class="slideshow-image" alt="Nossa memória">
+                    <img src="/photos/IMG_9243.jpg" class="slideshow-image" alt="Nossa memória">
+                    <img src="/photos/IMG_9443.jpg" class="slideshow-image" alt="Nossa memória">
+                </div>
+                <div class="slideshow-controls">
+                    <button class="slide-btn prev" id="prevSlide">❮</button>
+                    <button class="slide-btn next" id="nextSlide">❯</button>
+                </div>
+                <div class="slide-indicators" id="slideIndicators"></div>
+            </div>
+
+            <button id="continueToMessages" class="btn btn-continue">
+                Continuar 💕
+            </button>
+        </div>
+    </div>
+
+    <!-- Phase 3: Romantic Messages -->
+    <div id="phase3" class="phase">
+        <div class="content-container">
+            <h2 class="phase-title">💭 Palavras do Coração</h2>
+
+            <div class="messages-container">
+                <div class="message-card">
+                    <div class="message-icon">✨</div>
+                    <p class="message-text">
+                        Cada momento contigo é uma dádiva. És a luz que ilumina os meus dias
+                        e o calor que aquece o meu coração.
+                    </p>
+                </div>
+
+                <div class="message-card">
+                    <div class="message-icon">🌹</div>
+                    <p class="message-text">
+                        O teu sorriso é a minha melodia favorita, os teus olhos são o meu refúgio,
+                        e o teu amor é o meu maior tesouro.
+                    </p>
+                </div>
+
+                <div class="message-card">
+                    <div class="message-icon">💫</div>
+                    <p class="message-text">
+                        Agradeço todos os dias por te ter na minha vida. És tudo o que sempre sonhei
+                        e muito mais do que merecia.
+                    </p>
+                </div>
+
+                <div class="message-card">
+                    <div class="message-icon">❤️</div>
+                    <p class="message-text">
+                        Este Dia dos Namorados é apenas uma desculpa para te dizer o que sinto todos os dias:
+                        Amo-te com todo o meu ser.
+                    </p>
+                </div>
+            </div>
+
+            <button id="continueToGame" class="btn btn-continue">
+                Continuar a experiência 💖
+            </button>
+        </div>
+    </div>
+
+    <!-- Phase 4: Heart Catching Game -->
+    <div id="phase4" class="phase">
+        <div class="content-container">
+            <h2 class="phase-title">💝 Um Jogo para Ti</h2>
+            <p class="phase-subtitle">Apanha os corações que representam o meu amor por ti!</p>
+
+            <div class="game-counter">
+                <span class="counter-label">Corações:</span>
+                <span id="heartCounter" class="counter-value">0/10</span>
+            </div>
+            <div id="gameArea" class="game-area"></div>
+
+            <button id="continueToMenu" class="btn btn-continue" style="display: none;">
+                Ver o jantar especial 🍽️
+            </button>
+        </div>
+    </div>
+
+    <!-- Phase 5: Restaurant Reservation -->
+    <div id="phase5" class="phase">
+        <div class="content-container">
+            <h2 class="phase-title">🍽️ Jantar Romântico 💖</h2>
+            <p class="phase-subtitle">Um momento especial para nós dois</p>
+
+            <div class="restaurant-container">
+                <div class="restaurant-card">
+                    <div class="restaurant-icon">🥗</div>
+                    <h3 class="restaurant-name">Eat Salad Châteauroux</h3>
+
+                    <div class="restaurant-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📍</span>
+                            <span class="detail-text">Châteauroux, França</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">📅</span>
+                            <span class="detail-text">14 de Fevereiro</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🕐</span>
+                            <span class="detail-text">Hora: A combinar</span>
+                        </div>
+                    </div>
+
+                    <p class="romantic-message">
+                        Vamos ter uma noite inesquecível juntos.
+                        Comida deliciosa, boa companhia, e o melhor de tudo: estar contigo!
+                        Mal posso esperar para ver o teu sorriso. 💕
+                    </p>
+                </div>
+            </div>
+
+            <button id="continueToFinal" class="btn btn-continue">
+                Mensagem final 💖
+            </button>
+        </div>
+    </div>
+
+    <!-- Final Screen -->
+    <div id="finalScreen" class="phase">
+        <div class="content-container">
+            <h2 class="phase-title">💖 Para Ti, Brena 💖</h2>
+
+            <div class="final-message">
+                <p class="final-text">
+                    Este site foi criado especialmente para ti,
+                    para mostrar o quanto és especial para mim.
+                </p>
+                <p class="final-text">
+                    Cada linha de código foi escrita com amor,
+                    cada cor escolhida a pensar em ti,
+                    cada palavra pensada para te fazer sorrir.
+                </p>
+                <p class="final-text">
+                    Obrigado por seres quem és,
+                    por me fazeres feliz todos os dias,
+                    e por tornares a minha vida mais bonita.
+                </p>
+                <p class="final-signature">
+                    Feliz Dia dos Namorados! 💕<br>
+                    Te amo infinitamente,<br>
+                    Hoje e sempre ❤️
+                </p>
+            </div>
+
+            <div class="heart-rain" id="heartRain"></div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
