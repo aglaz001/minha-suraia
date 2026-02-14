@@ -16,18 +16,13 @@ export default function Page() {
           </p>
         </div>
         
-        <Link 
+        <Link
           href="/valentine/index.html"
           className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-rose-500 rounded-full hover:from-pink-600 hover:to-rose-600 transition-all hover:scale-105 shadow-lg hover:shadow-xl"
         >
           Abrir Experiência
           <span className="text-2xl">💕</span>
         </Link>
-
-        <div className="pt-8 text-sm text-rose-600">
-          <p>Criado com HTML, CSS e JavaScript puro</p>
-          <p className="mt-2">Todas as funcionalidades implementadas ✨</p>
-        </div>
       </div>
     </div>
   )
